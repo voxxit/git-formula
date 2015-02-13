@@ -1,6 +1,6 @@
 {% set git = pillar.get('git', {}) -%}
-{% set version = git.get('version', '1.8.4.2') -%}
-{% set checksum = git.get('checksum', 'sha1=f2e9317703553b4215700605c15d0f3a30623a9d') -%}
+{% set version = git.get('version', '2.3.0') -%}
+{% set checksum = git.get('checksum', 'sha256=ba2fe814e709a5d0f034ebe82083fce7feed0899b3a8c8b3adf1c5a85d1ce9ac') -%}
 {% set source = git.get('source_root', '/usr/local/src') -%}
 
 {% set git_package = source + '/git-' + version + '.tar.gz' -%}
@@ -8,10 +8,10 @@
 get-git:
   pkg.installed:
       - names:
-        - libcurl4-openssl-dev 
-        - libexpat1-dev 
-        - gettext 
-        - libz-dev 
+        - libcurl4-openssl-dev
+        - libexpat1-dev
+        - gettext
+        - libz-dev
         - libssl-dev
         - build-essential
   file.managed:
