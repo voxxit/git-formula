@@ -16,7 +16,7 @@ get-git:
         - build-essential
   file.managed:
     - name: {{ git_package }}
-    - source: https://git-core.googlecode.com/files/git-{{ version }}.tar.gz
+    - source: https://www.kernel.org/pub/software/scm/git/git-{{ version }}.tar.gz
     - source_hash: {{ checksum }}
   cmd.wait:
     - cwd: {{ source }}
